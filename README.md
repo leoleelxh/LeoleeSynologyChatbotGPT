@@ -1,7 +1,11 @@
 
 
 # 介绍
+基于这个大神的代码：https://github.com/leoleelxh/SynologyChatbotGPT
+只是加了自定义openai的代理URL，可以在setting配置自己的代理URL。
+其余配置，参考原文。
 
+# 以下为原代码介绍
 一个 Python 项目，使用 OpenAI API 和群晖 Synology Chat 套件搭建了一个聊天机器人，同时整合了 ChatGPT-3.5 文本语言模型和 Edits 图片生成模型，并具备即时在本地运行 Python 代码和 Bash 命令的能力 —— *it is more than ChatGPT*.
 
 它首先是一个 ChatGPT-3.5 的套壳；但同时，用户还可以：
