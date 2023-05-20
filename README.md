@@ -2,7 +2,7 @@
 
 # 介绍
 基于这个大神的代码：https://github.com/leoleelxh/SynologyChatbotGPT
-只是加了自定义openai的代理URL，可以在setting配置自己的代理URL。
+只是加了自定义openai的代理URL <OPENAI_API_BASE>，可以在setting配置自己的代理URL,或在docker容器配置环境参数。
 其余配置，参考原文。
 
 # 以下为原代码介绍
