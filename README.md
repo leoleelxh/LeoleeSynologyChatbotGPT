@@ -2,7 +2,10 @@
 
 # 介绍
 基于这个大神的代码：[https://github.com/Xueheng-Li/SynologyChatbotGPT](https://github.com/Xueheng-Li/SynologyChatbotGPT)
-只是加了自定义openai的代理URL <OPENAI_API_BASE>，可以在setting配置自己的代理URL,或在docker容器配置环境参数。
+
+1.加了自定义openai的代理URL <OPENAI_API_BASE>，可以在setting配置自己的代理URL,或在docker容器配置环境参数。
+2.默认端口改为5007
+
 其余配置，参考原文。
 
 # 以下为原代码介绍
@@ -19,11 +22,12 @@
 可以通过 docker 一行命令部署。示例：
 ```
 docker run -d --name synobot \
--p 5008:5008 \
+-p 5007:5007 \
+-e OPENAI_API_BASE="YOUR_OPENAI_API_URL" \
 -e OPENAI_API_KEY="YOUR_OPENAI_API_KEY" \
 -e INCOMING_WEBHOOK_URL="YOUR_INCOMING_WEBHOOK_URL" \
 -e WEBHOOK_TOKEN="YOUR_WEBHOOK_TOKEN" \
-xueheng/synogpt:latest
+leoleexh/leoleechat:latest
 ```
 
 ## 功能说明
