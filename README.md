@@ -21,10 +21,11 @@ docker镜像地址：https://hub.docker.com/r/leoleexh/leoleechat  :
 3. 可调用一众搜索引擎（Google, Bing, Baidu, DuckDuckGo）搜索实时信息回答问题。
 
 可以通过 docker 一行命令部署。示例：
+注意代理url格式，需要加V1
 ```
 docker run -d --name synobot \
 -p 5007:5007 \
--e OPENAI_API_BASE="YOUR_OPENAI_API_URL" \
+-e OPENAI_API_BASE="YOUR_OPENAI_API_URL/v1" \
 -e OPENAI_API_KEY="YOUR_OPENAI_API_KEY" \
 -e INCOMING_WEBHOOK_URL="YOUR_INCOMING_WEBHOOK_URL" \
 -e WEBHOOK_TOKEN="YOUR_WEBHOOK_TOKEN" \
@@ -100,7 +101,7 @@ xueheng/synogpt:latest
 
 | 变量名 | 描述                               | 默认值                                                                                   | 必填 |
 | --- |----------------------------------|---------------------------------------------------------------------------------------| --- |
-| `OPENAI_API_BASE` | 你的 OpenAI API  URL                 | 无                                                                                     | 是 |
+| `OPENAI_API_BASE` | 你的 OpenAI API  URL/v1                 | 无                                                                                     | 是 |
 | `OPENAI_API_KEY` | 你的 OpenAI API 密钥                 | 无                                                                                     | 是 |
 | `INCOMING_WEBHOOK_URL` | Synology Chat 机器人的传入 Webhook URL | 无                                                                                     | 是 |
 | `WEBHOOK_TOKEN` | Synology Chat 机器人的传出 Webhook 令牌  | 无                                                                                     | 是 |
